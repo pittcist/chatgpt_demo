@@ -2,12 +2,14 @@ from dotenv import load_dotenv, dotenv_values
 from openai import OpenAI
 import os
 
-# loading variables from .env file
+# The api_key is stroed in a hidden environment file
+
+# Loading variables from .env file
 load_dotenv() 
 
+# Getting the API key
 api_key = os.getenv("OPENAI_API_KEY")
 # print(api_key)
-#api_key is stroed in environment
 
 client = OpenAI(api_key=api_key)
 
